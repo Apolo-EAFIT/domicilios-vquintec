@@ -1,0 +1,12 @@
+*.mk
+nbproject/configurations.xml
+*.bash
+nbproject/private/configurations.xml
+*.properties
+nbproject/private/private.xml
+*.xml
+*.o
+build/Debug/Cygwin-Windows/main.o.d
+*.exe
+Makefile
+Makefile
