@@ -40,6 +40,14 @@ void imprimirM(vector<vector<int>> mAdyacencia, int nNodos){
     }
 }
 
+struct Grafo {
+    
+    Grafo(const int nNodos){
+        vector<vector<short>> mAdyacencia(nNodos, vector<short>(nNodos,0));
+    }
+    
+};
+
 int main(int argc, char** argv) {
     
     ifstream fAristas("medellin_arcos.txt");
@@ -52,8 +60,8 @@ int main(int argc, char** argv) {
     //int mAdya[nroNodos][nroNodos]; Se explota el stack
     
     getline(fAristas,linea);
-    const int nNodos = stoi(linea);
-    vector<vector<short>> mAdyacencia(nNodos, vector<short>(nNodos,0));
+    Grafo mapaMedellin = new Grafo(stoi(linea));
+    
     
     
     while(getline(fAristas,linea)){
