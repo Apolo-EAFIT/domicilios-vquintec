@@ -14,3 +14,5 @@ using namespace std;
 Grafo::Grafo(int nNodos){
     vector<vector<short>> mAdyacencia(nNodos, vector<short>(nNodos,0));
 }
+
+

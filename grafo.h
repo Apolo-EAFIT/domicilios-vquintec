@@ -7,11 +7,16 @@
 
 #pragma once
 
-struct Grafo{
+#include <iostream>
+#include <vector>
+#include "nodo.h"
+
+class Grafo {
 public:
     Grafo(int nNodos);
-};
-
-struct Nodo{
+    getNodo(int nodo);
     
+private:
+    int nNodos;
+    //vector<Nodo> listaNodo;
 };

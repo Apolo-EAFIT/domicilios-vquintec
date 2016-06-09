@@ -60,7 +60,8 @@ int main(int argc, char** argv) {
     //int mAdya[nroNodos][nroNodos]; Se explota el stack
     
     getline(fAristas,linea);
-    Grafo mapaMedellin = new Grafo(stoi(linea));
+    int nNodos = stoi(linea);
+    vector<vector<short>> mAdyacencia(nNodos, vector<short>(nNodos,0));
     
     
     
