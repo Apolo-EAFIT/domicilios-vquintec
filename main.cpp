@@ -138,6 +138,7 @@ int main(int argc, char** argv) {
     
     while(getline(domicilios,linea)){
         cout << "REPARTIDOR # " << contLinea << endl;
+        cout << "Recorrido: " << linea << endl;
         infoArista = grafo->explode(linea,' ');
         posExcluidas.assign(infoArista.size()-1,-1);
         puntoInicial = stoi(infoArista[0]);
@@ -172,7 +173,7 @@ int main(int argc, char** argv) {
             }
             
         }
-        cout << "RUTA FINAL: " << ruta_final << endl;
+        cout << "RUTA RECORRIDA: " << ruta_final << endl;
         cout << "Distancia total: " << acumDis << endl;
         datosDijkstra = dijkstra(grafo->getGrafo(),puntoFinal,puntoInicial);
         cout << "CAMINO DE VUELTA: " << endl;
