@@ -8,14 +8,14 @@
 #include "nodo.h"
 
 Nodo::Nodo():
-        nAntecesor(false),
+        nAntecesor(0),
         dato(-1),
         pesoAcum(-1),
         marca(false)
 {}
 
 Nodo::Nodo(int dato):
-        nAntecesor(false),
+        nAntecesor(0),
         dato(dato),
         pesoAcum(-1),
         marca(false)
@@ -23,15 +23,19 @@ Nodo::Nodo(int dato):
     
 }
 
+void Nodo::setDato(int dato){
+    this->dato = dato;
+}
+
 int Nodo::getDato(){
     return this->dato;
 }
 
-void Nodo::setNAntecesor(Nodo nAntecesor){
+void Nodo::setNAntecesor(Nodo *nAntecesor){
     this->nAntecesor = nAntecesor;
 }
 
-Nodo Nodo::getNAntecesor(){
+Nodo *Nodo::getNAntecesor(){
     return this->nAntecesor;
 }
 

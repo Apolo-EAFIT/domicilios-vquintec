@@ -11,9 +11,10 @@ class Nodo {
 public:
     Nodo();
     Nodo(int dato);
+    void setDato(int dato);
     int getDato();
-    void setNAntecesor(Nodo nAntecesor);
-    Nodo getNAntecesor();
+    void setNAntecesor(Nodo *nAntecesor);
+    Nodo *getNAntecesor();
     void setPesoAcum(int pesoAcum);
     int getPesoAcum();
     void setMarca(bool marca);
@@ -23,7 +24,7 @@ public:
     
 private:
     int dato;
-    Nodo nAntecesor;
+    Nodo *nAntecesor;
     int pesoAcum;
     bool marca;
     bool visitado = false;
