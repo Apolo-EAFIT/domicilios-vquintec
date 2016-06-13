@@ -39,13 +39,13 @@ int mindistance(int dist[],int sptset[],int V){
 
 vector<string> print(int dist[],int path[],int dest, int src, int V){
     vector<string> result(4);
-    string ruta = to_string(dest) + " >- ";
+    string ruta = to_string(dest) + " <- ";
     char buffer[33];
     result[0] = to_string(src); //Punto inicial
     result[1] = to_string(dest); //Punto final o destino
     result[2] = to_string(dist[dest]); //Distancia del recorrido
     while(path[dest]){
-        ruta = ruta + to_string(path[dest]) + " >- ";
+        ruta = ruta + to_string(path[dest]) + " <- ";
         dest=path[dest];
     }
     if(src == 0){
@@ -134,10 +134,10 @@ int main(int argc, char** argv) {
             }
             datosDijkstra = dijkstra(grafo->getGrafo(),stoi(infoArista[posActual]),stoi(infoArista[posEvaluar]));
             //cout << "Desde: " << datosDijkstra[0] << " Hasta: " << datosDijkstra[1] << " Se recorrieron: " << datosDijkstra[2] << " metros." << endl;
-            aux.assign(datosDijkstra[3].begin(),datosDijkstra[3].end());
-            reverse(aux.begin(), aux.end());
+            //aux.assign(datosDijkstra[3].begin(),datosDijkstra[3].end());
+            //reverse(aux.begin(), aux.end());
             //cout << "El camino recorrido fue: " << aux << endl;
-            ruta_final = ruta_final + " -> " + aux;
+            ruta_final = ruta_final + " <- " + datosDijkstra[3] + "\n";
             acumDis = acumDis + stoi(datosDijkstra[2]);
             posActual = posEvaluar;
             
@@ -152,9 +152,9 @@ int main(int argc, char** argv) {
         datosDijkstra = dijkstra(grafo->getGrafo(),puntoFinal,puntoInicial);
         cout << "CAMINO DE VUELTA: " << endl;
         cout << "Desde: " << datosDijkstra[0] << " Hasta: " << datosDijkstra[1] << " Se recorrieron: " << datosDijkstra[2] << " metros." << endl;
-        aux.assign(datosDijkstra[3].begin(),datosDijkstra[3].end());
-        reverse(aux.begin(), aux.end());
-        cout << "El camino recorrido fue: " << aux << endl;
+        //aux.assign(datosDijkstra[3].begin(),datosDijkstra[3].end());
+        //reverse(aux.begin(), aux.end());
+        cout << "El camino recorrido fue: " << datosDijkstra[3] << endl;
         
         contLinea++;
     }
