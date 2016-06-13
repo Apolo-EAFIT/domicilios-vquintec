@@ -102,7 +102,7 @@ int main(int argc, char** argv) {
     vector<string> datosDijkstra(4);
     datosDijkstra = dijkstra(grafo->getGrafo(),0,4);
     
-    ifstream domicilios("domicilios.txt");
+    ifstream domicilios("domicilios2.txt");
     
     string linea;
     getline(domicilios,linea);
