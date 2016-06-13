@@ -96,21 +96,16 @@ bool contains(vector<short> posExcluidas,int element){
 }
 
 int main(int argc, char** argv) {
-    string rutaM = "medellin_arcos3.txt";
+    string rutaM = "medellin_arcos.txt";
     Grafo *grafo = new Grafo(rutaM);
     
-    //imprimirM(grafo->getGrafo());
     vector<string> datosDijkstra(4);
     datosDijkstra = dijkstra(grafo->getGrafo(),0,4);
-    
-    /*cout << "Desde: " << datosDijkstra[0] << " Hasta: " << datosDijkstra[1] << " Se recorrieron: " << datosDijkstra[2] << " metros." << endl;
-    cout << "El camino recorrido fue: " << datosDijkstra[3] << endl;*/
     
     ifstream domicilios("domicilios.txt");
     
     string linea;
     getline(domicilios,linea);
-    int nroDom = stoi(linea);
     vector<string> infoArista;
     vector<short> posExcluidas;
     int contLinea = 1, puntoInicial, puntoFinal = 1;

@@ -1,5 +1,3 @@
-build/Debug/Cygwin-Windows/main.o: main.cpp grafo.h nodo.h
+build/Debug/Cygwin-Windows/main.o: main.cpp grafo.h
 
 grafo.h:
-
-nodo.h:

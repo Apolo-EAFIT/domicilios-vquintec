@@ -6,7 +6,6 @@
  */
 #pragma once
 
-#include "nodo.h"
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -27,5 +26,4 @@ public:
 private:
     ifstream fAristas, domicilios;
     vector< vector<short> > mAdyacencia;
-    vector<Nodo> nodo;
 };

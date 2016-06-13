@@ -15,12 +15,7 @@ Grafo::Grafo(string ruta)
     int nNodos = getNroNodos();
     
     mAdyacencia.assign(nNodos, vector<short>(nNodos,0));
-    nodo.assign(nNodos,0);
     
-    for(int i = 0;i < nNodos;i++){
-        //nodo[i] = new Nodo(i);
-        //cout << "Nodo: " << nodo[i].getDato() << " Peso Acum: " << nodo[i].getPesoAcum() << endl;
-    }
     llenarMatrizAdya();
     
 }
